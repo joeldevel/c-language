@@ -6,13 +6,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 int main() {
     printf("please enter a line: ");
     char *lineptr = NULL;
     size_t size;
     getline(&lineptr, &size, stdin);
-    printf("You've entered %s", lineptr);
+    printf("You've entered %s, string length = %d\n", lineptr, strlen(lineptr));
     // remember to free the resource!
     free(lineptr);
 }
